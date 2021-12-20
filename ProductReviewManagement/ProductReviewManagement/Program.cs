@@ -36,6 +36,9 @@ namespace ProductReviewManagement
                         management.TopThreeRatingRecords(productList);
                         break;
                     case 3:
+                        management.RetrieveRecordsUsingProductId(productList);
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
