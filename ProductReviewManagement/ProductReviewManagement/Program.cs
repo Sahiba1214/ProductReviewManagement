@@ -33,6 +33,9 @@ namespace ProductReviewManagement
                         management.Display(productList);
                         break;
                     case 2:
+                        management.TopThreeRatingRecords(productList);
+                        break;
+                    case 3:
                         flag = false;
                         break;
                 }
