@@ -60,6 +60,9 @@ namespace ProductReviewManagement
                         management.AverageRatingPerProductId(productList);
                         break;
                     case 11:
+                        management.RetrieveRecordsOfReviewMessage(productList, "Good");
+                        break;
+                    case 12:
                         flag = false;
                         break;
                 }
