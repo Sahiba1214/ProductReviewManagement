@@ -57,6 +57,9 @@ namespace ProductReviewManagement
                         management.RetrieveRecordsFromDataTableWhoseIsLikeIsTrue();
                         break;
                     case 10:
+                        management.AverageRatingPerProductId(productList);
+                        break;
+                    case 11:
                         flag = false;
                         break;
                 }
