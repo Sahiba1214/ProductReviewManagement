@@ -33,6 +33,21 @@ namespace ProductReviewManagement
                 Console.WriteLine("The Number of records for Product ID : {0} are {1}", data.ProductID, data.Count);
             }
         }
+        public void RetrieveOnlyProductIdAndReview(List<ProductReview> productList)
+        {
+            var records = from Product in productList select new { Product.ProductID, Product.Review };
+            foreach (var data in records)
+            {
+                Console.WriteLine("ProductID : " + data.ProductID + "\t" + " Review : " + data.Review);
+            }
+        }
     }
 }
+
+
+
+
+
+
+
 

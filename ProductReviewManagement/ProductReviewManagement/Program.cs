@@ -42,6 +42,9 @@ namespace ProductReviewManagement
                         management.RetrieveCountOfRecords(productList);
                         break;
                     case 5:
+                        management.RetrieveOnlyProductIdAndReview(productList);
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
