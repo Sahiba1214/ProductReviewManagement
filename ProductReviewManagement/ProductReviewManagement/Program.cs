@@ -51,6 +51,9 @@ namespace ProductReviewManagement
                         management.RetrieveOnlyProductIdAndReview(productList);
                         break;
                     case 8:
+                        management.ProductReviewsDataTable(productList);
+                        break;
+                    case 9:
                         flag = false;
                         break;
                 }

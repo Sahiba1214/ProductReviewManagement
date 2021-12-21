@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 
 namespace ProductReviewManagement
 {
@@ -46,8 +47,26 @@ namespace ProductReviewManagement
             var records = (from Product in productList select Product).Skip(5).ToList();
             Display(records);
         }
+        public void ProductReviewsDataTable(List<ProductReview> productList, object dataTable)
+        {
+            dataTable.Columns.Add("ProductId").DataType = typeof(Int32);
+            dataTable.Columns.Add("UserId").DataType = typeof(Int32);
+            dataTable.Columns.Add("Rating").DataType = typeof(Int32);
+            dataTable.Columns.Add("Review");
+            dataTable.Columns.Add("IsLike").DataType = typeof(bool);
+            foreach (var data in productList)
+            {
+                dataTable.Rows.Add(data.ProductID, data.UserID, data.Rating, data.Review, data.IsLike);
+            }
+            var productTable = from Product in dataTable.AsEnumerable() select Product;
+            foreach (DataRow Product in productTable)
+            {
+                Console.WriteLine("ProductId : " + Product.Field<int>("ProductId") + "\t" + "UserId : " + Product.Field<int>("UserId") + "\t" + "Rating : " + Product.Field<int>("Rating") + "\t" + "Review : " + Product.Field<string>("Review") + "\t" + "IsLike : " + Product.Field<bool>("IsLike"));
+            }
+        }
     }
 }
+
 
 
 
