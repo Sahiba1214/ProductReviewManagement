@@ -65,6 +65,12 @@ namespace ProductReviewManagement
                     case 12:
                         flag = false;
                         break;
+                    case 12:
+                        management.RetrieveRecordsUsingUserId();
+                        break;
+                    case 13:
+                        flag = false;
+                        break;
                 }
             }
         }
