@@ -45,6 +45,9 @@ namespace ProductReviewManagement
                         management.RetrieveOnlyProductIdAndReview(productList);
                         break;
                     case 6:
+                        management.SkipTopFiveRecords(productList);
+                        break;
+                    case 7:
                         flag = false;
                         break;
                 }
