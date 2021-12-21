@@ -54,6 +54,9 @@ namespace ProductReviewManagement
                         management.ProductReviewsDataTable(productList);
                         break;
                     case 9:
+                        management.RetrieveRecordsFromDataTableWhoseIsLikeIsTrue();
+                        break;
+                    case 10:
                         flag = false;
                         break;
                 }
